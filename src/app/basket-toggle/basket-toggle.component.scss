@@ -1,0 +1,44 @@
+@import "src/vars";
+
+.basket-toggle {
+  position: relative;
+  cursor: pointer;
+
+  &__icon {
+    height: 30px;
+
+    svg {
+      fill: #fff;
+      height: 100%;
+      transition: fill 0.2s;
+    }
+  }
+
+  &__amount {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    color: #fff;
+    background-color: $black;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+    transform: scale(1);
+    opacity: 1;
+    transition: 0.2s;
+  }
+
+  &.empty {
+    cursor: default;
+  }
+
+  &.empty &__amount {
+    transform: scale(0);
+    opacity: 0;
+  }
+}

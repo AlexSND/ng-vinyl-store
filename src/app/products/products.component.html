@@ -1,0 +1,6 @@
+<section class="products" id="products">
+  <h2 class="section-title">Catalog</h2>
+  <div class="products__wrapper page-wrapper">
+    <app-product *ngFor="let product of products" [product]="product" (onToBasket)="addToBasket($event)"></app-product>
+  </div>
+</section>

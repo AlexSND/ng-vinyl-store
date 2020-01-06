@@ -1,0 +1,22 @@
+<div class="product">
+  <div class="product__image">
+    <img src="{{product.imageUrl}}" alt="{{product.catnumber}}">
+    <a href="#" class="product__to-basket" (click)="toBasket(product.id, $event)">
+      <span *ngIf="product.inBasket" class="product__in-basket-text">
+         In basket
+      </span>
+    </a>
+  </div>
+  <div class="product__artist">
+    {{product.artist}}
+  </div>
+  <div class="product__title">
+    {{product.title}}
+  </div>
+  <div class="product__catnumber">
+    {{product.catnumber}}
+  </div>
+  <div class="product__price">
+    <span class="product__price-amount">{{product.price | currency}}</span>
+  </div>
+</div>
